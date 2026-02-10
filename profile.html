@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - University LMS</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-theme">
+    <div class="app-container">
+        <!-- Sidebar Navigation (Same as dashboard) -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h2>University LMS</h2>
+                </div>
+                <button class="sidebar-close" id="sidebarClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="dashboard.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="courses.html">
+                            <i class="fas fa-book"></i>
+                            <span>My Courses</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="assignments.html">
+                            <i class="fas fa-tasks"></i>
+                            <span>Assignments</span>
+                            <span class="badge badge-danger">3</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="profile.html">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="theme-toggle">
+                    <button id="themeToggle" class="btn btn-outline btn-block">
+                        <i class="fas fa-moon"></i> Switch Theme
+                    </button>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="header-title">
+                    <h1>My Profile</h1>
+                    <p class="welcome-message">Manage your personal information</p>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="notifications">
+                        <button class="icon-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge badge-danger">5</span>
+                        </button>
+                    </div>
+                    <div class="user-profile">
+                        <img src="https://ui-avatars.com/api/?name=John+Doe&background=4e73df&color=ffffff&size=40" alt="Profile">
+                        <span>John Doe</span>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Main Content Area -->
+            <main class="content-area">
+                <div class="profile-container">
+                    <!-- Profile Header -->
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <img src="https://ui-avatars.com/api/?name=John+Doe&background=4e73df&color=ffffff&size=150" alt="Profile">
+                            <div class="avatar-actions">
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-camera"></i> Change
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-info">
+                            <h2>John Doe</h2>
+                            <p class="profile-title">Computer Science Student</p>
+                            <p class="profile-id">Student ID: CS2023001</p>
+                            <div class="profile-stats">
+                                <div class="stat">
+                                    <span class="stat-value">3.8</span>
+                                    <span class="stat-label">GPA</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">95%</span>
+                                    <span class="stat-label">Attendance</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">6</span>
+                                    <span class="stat-label">Courses</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-actions">
+                            <button id="editProfileBtn" class="btn btn-primary">
+                                <i class="fas fa-edit"></i> Edit Profile
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Profile Details Form -->
+                    <div class="profile-card">
+                        <h3 class="card-title">Personal Information</h3>
+                        
+                        <form id="profileForm" class="profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name</label>
+                                    <input type="text" id="fullName" value="John Doe" disabled>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" value="john.doe@university.edu" disabled>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" value="+1 (555) 123-4567" disabled>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="studentId">Student ID</label>
+                                    <input type="text" id="studentId" value="CS2023001" disabled>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="department">Department</label>
+                                    <input type="text" id="department" value="Computer Science" disabled>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="enrollmentYear">Enrollment Year</label>
+                                    <input type="text" id="enrollmentYear" value="2023" disabled>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bio">Bio</label>
+                                <textarea id="bio" rows="3" disabled>Passionate computer science student with interest in web development, machine learning, and data structures. Currently focusing on building full-stack applications.</textarea>
+                            </div>
+                            
+                            <div class="form-actions" id="formActions">
+                                <!-- Buttons will be shown/hidden by JavaScript -->
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Academic Info -->
+                    <div class="profile-card">
+                        <h3 class="card-title">Academic Information</h3>
+                        <div class="academic-info">
+                            <div class="info-item">
+                                <span class="info-label">Current GPA</span>
+                                <span class="info-value">3.8 / 4.0</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Total Credits</span>
+                                <span class="info-value">96</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Attendance</span>
+                                <span class="info-value badge badge-success">95%</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Academic Standing</span>
+                                <span class="info-value badge badge-success">Good Standing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="alertContainer" class="alert-container"></div>
+
+    <script src="js/profile.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>
